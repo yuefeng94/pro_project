@@ -7,3 +7,7 @@ NIO中所有的I/O读写都需要用到缓冲区，以网络I/O为例，要向So
    2、position()、liMit()、capacity()
    3、flip():读取数据前执行的方法，目的是将limit置为position,position置为0，然后进行读取操作
    4、compact():整理缓冲区，便于继续写入数据，目的将未读取的数据移动到缓冲区头部,position = limit-position,limit=capacity
+
+
+
+   ehewelo
