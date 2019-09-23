@@ -7,7 +7,15 @@ NIO中所有的I/O读写都需要用到缓冲区，以网络I/O为例，要向So
    2、position()、liMit()、capacity()
    3、flip():读取数据前执行的方法，目的是将limit置为position,position置为0，然后进行读取操作
    4、compact():整理缓冲区，便于继续写入数据，目的将未读取的数据移动到缓冲区头部,position = limit-position,limit=capacity
+   5、wrap(byte[]):将byte[]包装为ByteBuffer。要注意的是，新ByteBuffer的position和limit都是0，capacity为数组的长度
+   6、hasRemaining():可以返回缓冲区中剩余的有效字节数，也就是position和limit两个位置之间的字节数
 
+Channel：
+   1、FileChannel
+        FileChannel = new FileInputStream(new File("path")).getChannel();
+        注意：inputStream获取的channel只能读取，outputStream获取的channel只能写入
+   2、SocketChannel
 
+   3、ServerSocketChannel
 
-   ehewelo
+Selector:
